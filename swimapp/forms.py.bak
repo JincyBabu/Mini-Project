@@ -1,0 +1,12 @@
+from django import forms
+from django.forms import CharField
+from auctionapp.models import pmodel
+
+# ----------------------------------------------user registration-------------------------------------------------------------------------------------------------------------------			 
+class pform(forms.Form):
+	itemname = forms.CharField(max_length=60)
+	img = forms.FileField()
+	class Meta:
+		model = pmodel
+		fields = ['tid','img']
+        
